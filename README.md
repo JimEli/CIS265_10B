@@ -7,6 +7,7 @@ Write the following parameterized macros.
 * Has the value 1 if both x and y fall between zero and n-1, inclusive.
 ```C
   MEDIAN(x, y, z)
+```
 * Finds the median of x, y and z.
 ```C
   POLYNOMIAL(x)
