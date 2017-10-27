@@ -42,18 +42,6 @@ int init_suite(void) { return 0; }
 int clean_suite(void) { return 0; }
 
 /* Test case functions. */
-void test_case_sample(void) {
-	CU_ASSERT(CU_TRUE);
-	CU_ASSERT_NOT_EQUAL(2, -1);
-	CU_ASSERT_STRING_EQUAL("string #1", "string #1");
-	CU_ASSERT_STRING_NOT_EQUAL("string #1", "string #2");
-
-	CU_ASSERT(CU_FALSE);
-	CU_ASSERT_EQUAL(2, 3);
-	CU_ASSERT_STRING_NOT_EQUAL("string #1", "string #1");
-	CU_ASSERT_STRING_EQUAL("string #1", "string #2");
-}
-
 void check_macro_test(void) {
 	CU_ASSERT_FALSE(CHECK(0, 0, 0));
 	CU_ASSERT_FALSE(CHECK(1, 1, 1));
