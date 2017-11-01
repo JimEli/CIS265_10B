@@ -91,13 +91,11 @@ int main(void) {
 	}
 
 	/* Add the tests to the suite. */
-	if ((NULL == CU_add_test(pSuite, "check_macro_test", check_macro_test)) ||
+	if (	(NULL == CU_add_test(pSuite, "check_macro_test", check_macro_test)) ||
 		(NULL == CU_add_test(pSuite, "median_macro_test", median_macro_test)) ||
-		(NULL == CU_add_test(pSuite, "polynomial_macro_test", polynomial_macro_test))
-		)
-	{
-		CU_cleanup_registry();
-		return CU_get_error();
+		(NULL == CU_add_test(pSuite, "polynomial_macro_test", polynomial_macro_test)) ) {
+	    CU_cleanup_registry();
+	    return CU_get_error();
 	}
 
 	/* Run all tests using the basic interface. */
